@@ -1,5 +1,7 @@
 var pluginsOptions = {
-  pattern: '*' // wildcard fixes BrowserSync not being found
+  // wildcard fixes BrowserSync and other non `gulp-*`
+  // packages not being found while lazy-loading
+  pattern: '*'
 };
 
 // Init Gulp and plugins
@@ -37,10 +39,10 @@ gulp.task('images', function (tmp) {
 // Minify and uglify JS
 gulp.task('vendor-scripts', function () {
   return gulp.src('src/scripts/vendor/**/*.js')
-  .pipe($.concat('vendor-pack.js'))
-  .on('error', $.util.log)
-  .pipe($.uglify())
-  .pipe(gulp.dest('src/scripts'));
+    .pipe($.concat('vendor-pack.js'))
+    .on('error', $.util.log)
+    .pipe($.uglify())
+    .pipe(gulp.dest('src/scripts'));
 });
 
 gulp.task('scripts', ['vendor-scripts'], function () {
