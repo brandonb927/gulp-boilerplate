@@ -14,5 +14,8 @@
     "src/scripts/vendor",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "domtastic": "~0.8.0"
+  }
 }
