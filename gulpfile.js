@@ -15,6 +15,7 @@ gulp.task('browser-sync', function () {
     browser: "google chrome",
     port: 9001,
     notify: false,
+    open: false,
     server: {
       baseDir: "./dist"
     }
@@ -51,8 +52,7 @@ gulp.task('scripts', ['vendor-scripts'], function () {
     '!src/scripts/{vendor,vendor/**}',
   ])
   .pipe($.jshint())
-  .pipe($.jshint.reporter($.stylish))
-  .pipe($.jshint.reporter('fail'))
+  .pipe($.jshint.reporter('jshint-stylish'))
   .on('error', $.util.log)
   .pipe($.uglify())
   .pipe(gulp.dest('dist/scripts'));
