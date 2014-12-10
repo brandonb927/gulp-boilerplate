@@ -11,9 +11,14 @@ I noticed that every time I started a new project I was rebuilding the same `gul
 
 ### What it does
 
-Simply run `gulp`. This is the default and only main task. 
+Simply run `gulp`. This is the default and only main task. This nets you:
 
-You'll have filesystem watchers and BrowserSync with livereload, plus your images will be optimized, and your CSS/JS minified and compressed which is all output into the `dist` folder. If you modify any HTML, Less, or Javascript files, you'll see your browser get updated on it's own, and if you access the project from another web-capable device, the scroll-position of the page will also be in sync across devices!
+- [BrowserSync](http://www.browsersync.io/) with livereload for cross-browser synchronized testing
+- filesystem watchers to recompile LESS/CSS/JS on file changes
+- outputted CSS/JS can be minified and compressed, while retaining sourcemaps
+- image/svg optimization
+- LESS CSS preprocessor
+- `rem` to `px` support for older browsers
 
 
 ### License
