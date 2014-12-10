@@ -1,2 +1,6 @@
 .DS_Store
 node_modules
+
+src/scripts/vendor/*
+src/scripts/vendor-pack.js
+dist/scripts/vendor-pack.js
