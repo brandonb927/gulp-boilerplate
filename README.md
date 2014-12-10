@@ -14,11 +14,11 @@ I noticed that every time I started a new project I was rebuilding the same `gul
 Simply run `gulp`. This is the default and only main task. This nets you:
 
 - [BrowserSync](http://www.browsersync.io/) with livereload for cross-browser synchronized testing
+- LESS CSS preprocessor
+- `rem` to `px` support for older browsers
 - filesystem watchers to recompile LESS/CSS/JS on file changes
 - outputted CSS/JS can be minified and compressed, while retaining sourcemaps
 - image/svg optimization
-- LESS CSS preprocessor
-- `rem` to `px` support for older browsers
 
 
 ### License
