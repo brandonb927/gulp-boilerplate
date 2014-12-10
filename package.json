@@ -18,6 +18,7 @@
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
     "gulp-util": "*",
-    "jshint-stylish": "*"
+    "jshint-stylish": "*",
+    "node-notifier": "*"
   }
 }
